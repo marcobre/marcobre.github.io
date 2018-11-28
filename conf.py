@@ -305,7 +305,7 @@ COMPILERS = {
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
-ONE_FILE_POSTS = False
+#ONE_FILE_POSTS = False
 
 # Preferred metadata format for new posts
 # "Nikola": reST comments, wrapped in a HTML comment if needed (default)
