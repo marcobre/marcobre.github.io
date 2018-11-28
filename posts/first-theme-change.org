@@ -1,0 +1,2 @@
+After playing around with Nikola for a while, i changed the theme to something little more modern but this is just the beginning.
+I am about to write a quick summary on the steps needed to get this up and running soon.
