@@ -1,0 +1,4 @@
+Sitemap: https://marcobre.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: marcobre.github.io
