@@ -2,7 +2,7 @@
 .. title: This is my first post using Nikola and org-mode
 .. slug: this-is-a-testpost-with-orgmode-plugin
 .. date: 2018-11-28 15:33:32 UTC+01:00
-.. tags: nikola emacs orgmode
+.. tags: nikola, emacs, orgmode
 .. category: emacs
 .. link: 
 .. description: 
@@ -10,6 +10,6 @@
 
 #+END_COMMENT
 
-* This is my fitst post using Nikola and org-mode
+* This first post using github pages and org-mode
   Looking for a way to blog easily using org-mode files and generate a blog hosted on github.io i stumbled upon
   Nikola, a static site generator that has an org-mode plugin. This is my fist test after messing with the installation.
