@@ -1,0 +1,110 @@
+#+BEGIN_COMMENT
+.. title: Create github.io pages with org-mode using nikola
+.. slug: create-githubio-pages-with-org-mode-using-nikola
+.. date: 2018-11-28 23:07:19 UTC+01:00
+.. tags:nikola , org-mode, emacs 
+.. category: emacs
+.. link: 
+.. description: How to create github pages with org-mode
+.. type: text
+
+#+END_COMMENT
+
+* Static webpages on github using Nicola and org-mode
+** Install pip and virtualenv
+   sudo apt-get install python3-virtualenv python3-pip
+** prepare the virtualenv 'blog' in virtual environment folder ~/virenvs
+   #+BEGIN_SRC shell
+   pip3 install requests
+   pip3 install livereload
+   pip3 install virtualenv
+   pip3 install virtualenvwrapper
+   export WORKON_HOME=$HOME/virenvs
+   mkdir ~/virenvs
+   mkvirtualenv blog
+   source ~/virenvs/blog/bin/activate   
+   #+END_SRC
+   Add the following lines to your startup script like .bashrc
+   #+BEGIN_SRC shell
+   export WORKON_HOME=$HOME/virenvs
+   export PROJECT_HOME=$HOME/your project folder
+   source ~/.local/bin/virtualenvwrapper.sh
+   
+   #+END_SRC
+** install Nikola + requirements in the "blog" virtualenv   
+   pip3 install --upgrade pip setuptools wheel Cython
+   pip3 install --upgrade "Nikola[extras,tests]"
+   nikola plugin -i orgmode
+   cd $HOME/path/to/your/project
+  
+**  create a github repo call <username>.github.io and clone to a loal project folder
+   #+BEGIN_SRC shell
+   git clone https://github.com/username/username.github.io $home/path/to/your/project
+   git checkout -b sources
+ #+END_SRC
+   cd into the project and add a .gitignore file with the following content
+#+BEGIN_SRC shell
+  *.py[cod]
+  __pycache__
+  cache
+  output
+  .doit.db
+#+END_SRC
+  and commit it
+#+BEGIN_SRC shell
+  git add .gitignore
+  git commit -m "Add .gitignore"
+#+END_SRC
+** Now start to create your site and move to project root
+#+BEGIN_SRC shell
+  nikola init my_site 
+  mv my_site/* .
+  rm -r my_site
+#+END_SRC 
+** Build a skel and start a local server to check it under localhost:8000
+#+BEGIN_SRC shell
+nikola build
+nikola serve
+#+END_SRC
+** append the installed org-mode plugin to this sites config.py by adding
+#+BEGIN_SRC shell
+# Add the orgmode compiler to your COMPILERS dict.
+COMPILERS["orgmode"] = ('.org',)
+
+# Add org files to your POSTS, PAGES
+POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
+PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+
+#+END_SRC
+** Write a test post
+   To start writing your first post using org-mode style use the following command :
+#+BEGIN_SRC shell
+  nikola new_post -e -f orgmode
+#+END_SRC
+  It will ask you for a title of the post und run your favorite $EDITOR which idealy should be emacs ;-)
+
+** prepare for GitHub and deploy
+   To deploy the static website to github edit the conf.py once again and change the following lines
+   #+BEGIN_SRC shell
+   GITHUB_SOURCE_BRANCH = 'sources'
+   GITHUB_DEPLOY_BRANCH = 'master'   
+   #+END_SRC
+
+   Now you can deploy to GitHub by simply calling :
+#+BEGIN_SRC shell
+  nikola github_deploy
+#+END_SRC
+  You can now check out your https://<username>.github.io/ website and enjoy what you just created !
+  Sometimes the first checkin is taking a while, i fixed it by deploying once again and it showed up within a minute.
+
+* Conclusion
+  There are many similar howtos for this topic. I quickly created this post while setting up all the stuff as i stumbled across minor differences working through the howtos.
+
+** References :
+   [[https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/]]
+   [[https:getnikola.com/getting-started.html]]
+   [[https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola]]
+   [[https:virtualenvwrapper.readthedocs.io/en/latest/install.html]]
+
+
+
