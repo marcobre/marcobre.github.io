@@ -12,7 +12,10 @@
 
 * Static webpages on github using Nicola and org-mode
 ** Install pip and virtualenv
+   #+BEGIN_SRC shell
    sudo apt-get install python3-virtualenv python3-pip
+   #+END_SRC
+
 ** prepare the virtualenv 'blog' in virtual environment folder ~/virenvs
    #+BEGIN_SRC shell
    pip3 install requests
@@ -29,14 +32,20 @@
    export WORKON_HOME=$HOME/virenvs
    export PROJECT_HOME=$HOME/your project folder
    source ~/.local/bin/virtualenvwrapper.sh
-   
    #+END_SRC
+   then reload the .bashrc file
+   #+BEGIN_SRC shell
+   source ~/.bashrc
+   #+END_SRC
+
 ** install Nikola + requirements in the "blog" virtualenv   
+   #+BEGIN_SRC shell
    pip3 install --upgrade pip setuptools wheel Cython
    pip3 install --upgrade "Nikola[extras,tests]"
    nikola plugin -i orgmode
    cd $HOME/path/to/your/project
-  
+   #+END_SRC
+
 **  create a github repo call <username>.github.io and clone to a loal project folder
    #+BEGIN_SRC shell
    git clone https://github.com/username/username.github.io $home/path/to/your/project
@@ -73,7 +82,7 @@ COMPILERS["orgmode"] = ('.org',)
 
 # Add org files to your POSTS, PAGES
 POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+PAGES = PAGES + (("pages/*.org", "pages", "page.tmpl"),)
 
 #+END_SRC
 ** Write a test post
@@ -102,8 +111,11 @@ PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
 
 ** References :
    [[https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/]]
+
    [[https:getnikola.com/getting-started.html]]
-   [[https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola]]
+
+   [[https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola
+]]
    [[https:virtualenvwrapper.readthedocs.io/en/latest/install.html]]
 
 

@@ -136,6 +136,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        ("http://github.com/marcobre", "GitHub"),
         ("/archive.html", "Archiv"),
         ("/categories/", "Tags"),
         ("/rss.xml", "RSS-Feed"),
@@ -214,12 +215,14 @@ THEME_CONFIG = {
 #     )
 
 POSTS = (
+    ("posts/*.org", "posts", "post.tmpl"),
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
     ("posts/*.html", "posts", "post.tmpl"),
 )
 PAGES = (
+    ("pages/*.org", "pages", "page.tmpl"),
     ("pages/*.rst", "pages", "page.tmpl"),
     ("pages/*.md", "pages", "page.tmpl"),
     ("pages/*.txt", "pages", "page.tmpl"),
@@ -293,6 +296,7 @@ COMPILERS = {
     "wiki": ('.wiki',),
     "ipynb": ('.ipynb',),
     "html": ('.html', '.htm'),
+    "orgmode":('.org',),
     # PHP files are rendered the usual way (i.e. with the full templates).
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
@@ -531,7 +535,7 @@ HIDDEN_AUTHORS = ['Guest']
 # Final location for the main blog page and sibling paginated pages is
 # output / TRANSLATION[lang] / INDEX_PATH / index-*.html
 # (translatable)
-# INDEX_PATH = ""
+#INDEX_PATH = ""
 
 # Optional HTML that displayed on “main” blog index.html files.
 # May be used for a greeting. (translatable)
@@ -1275,7 +1279,7 @@ MARKDOWN_EXTENSIONS = ['markdown.extensions.fenced_code', 'markdown.extensions.c
 # Bundle JS and CSS into single files to make site loading faster in a HTTP/1.1
 # environment but is not recommended for HTTP/2.0 when caching is used.
 # Defaults to True.
-# USE_BUNDLES = True
+USE_BUNDLES = False
 
 # Plugins you don't want to use. Be careful :-)
 # DISABLED_PLUGINS = ["render_galleries"]
@@ -1343,8 +1347,8 @@ GLOBAL_CONTEXT = {}
 GLOBAL_CONTEXT_FILLER = []
 
 # Add the orgmode compiler to your COMPILERS dict.
-COMPILERS["orgmode"] = ('.org',)
+#COMPILERS["orgmode"] = ('.org',)
 
 # Add org files to your POSTS, PAGES
-POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+#POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
+#PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
