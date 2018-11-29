@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="This is Marco's Blog">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marco's Blog</title>
+<title>Home | Marco's Blog</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
@@ -20,7 +19,7 @@
 <!--[if lt IE 9]>
             <script src="assets/js/html5shiv.min.js"></script>
             <script src="assets/js/respond.min.js"></script>
-        <![endif]--><link rel="prefetch" href="posts/create-githubio-pages-with-org-mode-using-nikola/" type="text/html">
+        <![endif]--><meta name="author" content="Marco Bretzke">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -46,6 +45,7 @@
         <div class="row">
             <nav class="col-xs-12 col-sm-3 menu"><ul>
 <li class="withripple"><a href="http://github.com/marcobre">GitHub</a></li>
+                <li class="withripple"><a href="posts/">Blog</a></li>
                 <li class="withripple"><a href="archive.html">Archiv</a></li>
                 <li class="withripple"><a href="categories/">Tags</a></li>
                 <li class="withripple"><a href="rss.xml">RSS-Feed</a></li>
@@ -54,233 +54,103 @@
                 </ul>
 <ul></ul></nav><div class="posts-material col-xs-12 col-sm-9">
                 <div class="col-xs-12 col-md-11 content-material">
-
-    <div class="postindex well post-material ">
-    
-        <article class="h-entry post-text"><header><h1 class="p-name entry-title header"><a href="posts/create-githubio-pages-with-org-mode-using-nikola/" class="u-url">Create github.io pages with org-mode using nikola</a></h1>
-            <div class="metadata">
-                <span class="byline author vcard">
-                        <i class="mdi-action-face-unlock"></i>
-                    Marco Bretzke
-                </span>
-                <span class="dateline"><a href="posts/create-githubio-pages-with-org-mode-using-nikola/" rel="bookmark">
-                    <i class="mdi-device-access-time"></i><time class="published dt-published" datetime="2018-11-28T23:07:19+01:00" title="2018-11-28 23:07">2018-11-28 23:07</time></a></span>
-                    <span class="commentline">        
-</span>
-            </div>
-            <hr></header><div class="e-content entry-content">
-        <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Static webpages on github using Nicola and org-mode</h2>
+<article class="post-text storypage" itemscope="itemscope" itemtype="http://schema.org/Article"><header></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Welcome to my Homepage</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+I never thought i would create another after years of absence but using emacs and Nikola makes it quite comfortable again :-)
+On this page i want to share the stuff and topics i stumble upon my journey through live. These can be anything but most likely
+tech topics about linux, ricing my desktop, emacs/orgmode which i use to create this site and maybe my other personal projects.
+</p>
 </div>
+
 <div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Install pip and virtualenv</h3>
+<h3 id="sec-1-1">Not much to see yet</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="highlight"><pre><span></span>sudo apt-get install python3-virtualenv python3-pip
-</pre></div>
+<p>
+As i just created the site it will possibly take a while before worth sharing and will change in look and structure often.
+Feel free to come back later :-)
+</p>
 </div>
 </div>
+
 
 <div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">prepare the virtualenv 'blog' in virtual environment folder ~/virenvs</h3>
+<h3 id="sec-1-2">Here are my latests blog posts :</h3>
 <div class="outline-text-3" id="text-1-2">
-<div class="highlight"><pre><span></span>pip3 install requests
-pip3 install livereload
-pip3 install virtualenv
-pip3 install virtualenvwrapper
-export WORKON_HOME=$HOME/virenvs
-mkdir ~/virenvs
-mkvirtualenv blog
-source ~/virenvs/blog/bin/activate   
-</pre></div>
 <p>
-Add the following lines to your startup script like .bashrc
+<!-- Begin post-list post_list_1fcb67148eaa4b4bba5400558a8ad864 -->
 </p>
-<div class="highlight"><pre><span></span>export WORKON_HOME=$HOME/virenvs
-export PROJECT_HOME=$HOME/your project folder
-source ~/.local/bin/virtualenvwrapper.sh
-</pre></div>
-<p>
-then reload the .bashrc file
-</p>
-<div class="highlight"><pre><span></span>source ~/.bashrc
-</pre></div>
+<div id="post_list_1fcb67148eaa4b4bba5400558a8ad864" class="post-list">
+    <ul class="post-list">
+<li class="post-list-item">
+            2018-11-29 11:33
+             
+            <a href="posts/customizing-a-nikola-theme/">Customizing a Nikola Theme</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 23:07
+             
+            <a href="posts/create-githubio-pages-with-org-mode-using-nikola/">Create github.io pages with org-mode using nikola</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 22:50
+             
+            <a href="posts/first-theme-change/">First Theme change</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 15:33
+             
+            <a href="posts/this-is-a-testpost-with-orgmode-plugin/">This is my first post using Nikola and org-mode</a>
+            </li>
+    </ul>
 </div>
-</div>
+<!-- End post-list post_list_1fcb67148eaa4b4bba5400558a8ad864 -->
 
+
+</div>
+</div>
 <div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">install Nikola + requirements in the "blog" virtualenv</h3>
+<h3 id="sec-1-3">The posts related to nikola :</h3>
 <div class="outline-text-3" id="text-1-3">
-<div class="highlight"><pre><span></span>pip3 install --upgrade pip setuptools wheel Cython
-pip3 install --upgrade "Nikola[extras,tests]"
-nikola plugin -i orgmode
-cd $HOME/path/to/your/project
-</pre></div>
-</div>
-</div>
-
-<div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4">create a github repo call &lt;username&gt;.github.io and clone to a loal project folder</h3>
-<div class="outline-text-3" id="text-1-4">
-<div class="highlight"><pre><span></span>git clone https://github.com/username/username.github.io $home/path/to/your/project
-git checkout -b sources
-</pre></div>
 <p>
-cd into the project and add a .gitignore file with the following content
+<!-- Begin post-list post_list_5ade8b76672444219ca5d8e0f8b496c5 -->
 </p>
-<div class="highlight"><pre><span></span>*.py[cod]
-__pycache__
-cache
-output
-.doit.db
-</pre></div>
-<p>
-and commit it
-</p>
-<div class="highlight"><pre><span></span>git add .gitignore
-git commit -m "Add .gitignore"
-</pre></div>
+<div id="post_list_5ade8b76672444219ca5d8e0f8b496c5" class="post-list">
+    <ul class="post-list">
+<li class="post-list-item">
+            2018-11-29 11:33
+             
+            <a href="posts/customizing-a-nikola-theme/">Customizing a Nikola Theme</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 23:07
+             
+            <a href="posts/create-githubio-pages-with-org-mode-using-nikola/">Create github.io pages with org-mode using nikola</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 22:50
+             
+            <a href="posts/first-theme-change/">First Theme change</a>
+            </li>
+            <li class="post-list-item">
+            2018-11-28 15:33
+             
+            <a href="posts/this-is-a-testpost-with-orgmode-plugin/">This is my first post using Nikola and org-mode</a>
+            </li>
+    </ul>
 </div>
-</div>
-<div id="outline-container-sec-1-5" class="outline-3">
-<h3 id="sec-1-5">Now start to create your site and move to project root</h3>
-<div class="outline-text-3" id="text-1-5">
-<div class="highlight"><pre><span></span>nikola init my_site 
-mv my_site/* .
-rm -r my_site
-</pre></div>
-</div>
-</div>
-<div id="outline-container-sec-1-6" class="outline-3">
-<h3 id="sec-1-6">Build a skel and start a local server to check it under localhost:8000</h3>
-<div class="outline-text-3" id="text-1-6">
-<div class="highlight"><pre><span></span>nikola build
-nikola serve
-</pre></div>
-</div>
-</div>
-<div id="outline-container-sec-1-7" class="outline-3">
-<h3 id="sec-1-7">append the installed org-mode plugin to this sites config.py by adding</h3>
-<div class="outline-text-3" id="text-1-7">
-<div class="highlight"><pre><span></span># Add the orgmode compiler to your COMPILERS dict.
-COMPILERS["orgmode"] = ('.org',)
-
-# Add org files to your POSTS, PAGES
-POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("pages/*.org", "pages", "page.tmpl"),)
-</pre></div>
-</div>
-</div>
-<div id="outline-container-sec-1-8" class="outline-3">
-<h3 id="sec-1-8">Write a test post</h3>
-<div class="outline-text-3" id="text-1-8">
-<p>
-To start writing your first post using org-mode style use the following command :
-</p>
-<div class="highlight"><pre><span></span>nikola new_post -e -f orgmode
-</pre></div>
-<p>
-It will ask you for a title of the post und run your favorite $EDITOR which idealy should be emacs ;-)
-</p>
-</div>
-</div>
-
-<div id="outline-container-sec-1-9" class="outline-3">
-<h3 id="sec-1-9">prepare for GitHub and deploy</h3>
-<div class="outline-text-3" id="text-1-9">
-<p>
-To deploy the static website to github edit the conf.py once again and change the following lines
-</p>
-<div class="highlight"><pre><span></span>GITHUB_SOURCE_BRANCH = 'sources'
-GITHUB_DEPLOY_BRANCH = 'master'   
-</pre></div>
-
-<p>
-Now you can deploy to GitHub by simply calling :
-</p>
-<div class="highlight"><pre><span></span>nikola github_deploy
-</pre></div>
-<p>
-You can now check out your <a href="https://">https://</a>&lt;username&gt;.github.io/ website and enjoy what you just created !
-Sometimes the first checkin is taking a while, i fixed it by deploying once again and it showed up within a minute.
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Conclusion</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-There are many similar howtos for this topic. I quickly created this post while setting up all the stuff as i stumbled across minor differences working through the howtos.
-</p>
-</div>
-
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">References :</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-<a href="https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/">https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/</a>
-</p>
-
-<p>
-<a href="https:getnikola.com/getting-started.html">https:getnikola.com/getting-started.html</a>
-</p>
-
-<p>
-<a href="https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola">https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola</a>
-<a href="https:virtualenvwrapper.readthedocs.io/en/latest/install.html">https:virtualenvwrapper.readthedocs.io/en/latest/install.html</a>
-</p>
-</div>
-</div>
-</div>
-        </div>
-        </article><article class="h-entry post-text"><header><h1 class="p-name entry-title header"><a href="posts/first-theme-change/" class="u-url">First Theme change</a></h1>
-            <div class="metadata">
-                <span class="byline author vcard">
-                        <i class="mdi-action-face-unlock"></i>
-                    Marco Bretzke
-                </span>
-                <span class="dateline"><a href="posts/first-theme-change/" rel="bookmark">
-                    <i class="mdi-device-access-time"></i><time class="published dt-published" datetime="2018-11-28T22:50:10+01:00" title="2018-11-28 22:50">2018-11-28 22:50</time></a></span>
-                    <span class="commentline">        
-</span>
-            </div>
-            <hr></header><div class="e-content entry-content">
-        <p>
-After playing around with Nikola for a while, i changed the theme to something little more modern but this is just the beginning.
-I am about to write a quick summary on the steps needed to get this up and running soon.
-</p>
-        </div>
-        </article><article class="h-entry post-text"><header><h1 class="p-name entry-title header"><a href="posts/this-is-a-testpost-with-orgmode-plugin/" class="u-url">This is my first post using Nikola and org-mode</a></h1>
-            <div class="metadata">
-                <span class="byline author vcard">
-                        <i class="mdi-action-face-unlock"></i>
-                    Marco Bretzke
-                </span>
-                <span class="dateline"><a href="posts/this-is-a-testpost-with-orgmode-plugin/" rel="bookmark">
-                    <i class="mdi-device-access-time"></i><time class="published dt-published" datetime="2018-11-28T15:33:32+01:00" title="2018-11-28 15:33">2018-11-28 15:33</time></a></span>
-                    <span class="commentline">        
-</span>
-            </div>
-            <hr></header><div class="e-content entry-content">
-        <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">This first post using github pages and org-mode</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-Looking for a way to blog easily using org-mode files and generate a blog hosted on github.io i stumbled upon
-Nikola, a static site generator that has an org-mode plugin. This is my fist test after messing with the installation.
-</p>
-</div>
-</div>
-        </div>
-        </article>
-</div>
-
-        
+<!-- End post-list post_list_5ade8b76672444219ca5d8e0f8b496c5 -->
 
 
-                </div>
+</div>
+</div>
+</div>
+    </div>
+    
+</article>
+</div>
             </div>
         </div>
         <button class="btn btn-fab btn-raised btn-material-green btn-footer" data-toggle="modal" data-target="#footer-dialog">
@@ -304,6 +174,10 @@ Nikola, a static site generator that has an org-mode plugin. This is my fist tes
           </div>
         </div>
         <div class="source-button">
+    <a class="btn btn-fab btn-raised btn-material-indigo" target="_blank" href="index.org" title="Source">
+        <i class="mdi-file-cloud-download"></i>
+    </a>
+
         </div>
 </div>
 

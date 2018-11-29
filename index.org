@@ -21,3 +21,9 @@
 ** Not much to see yet 
    As i just created the site it will possibly take a while before worth sharing and will change in look and structure often.
    Feel free to come back later :-)
+
+
+** Here are my latests blog posts :
+{{% post-list stop=5 %}}{{% /post-list %}}
+** The posts related to nikola :
+{{% post-list tags=nikola %}}{{% /post-list %}}

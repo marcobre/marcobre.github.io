@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="description" content="How to customize a nikola theme using bootswatch ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>This is my first post using Nikola and org-mode | Marco's Blog</title>
+<title>Customizing a Nikola Theme | Marco's Blog</title>
 <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
@@ -15,12 +16,13 @@
 <link href="../../assets/css/kc.fab.css" rel="stylesheet" type="text/css">
 <link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://marcobre.github.io/posts/this-is-a-testpost-with-orgmode-plugin/">
+<link rel="canonical" href="https://marcobre.github.io/posts/customizing-a-nikola-theme/">
 <!--[if lt IE 9]>
             <script src="../../assets/js/html5shiv.min.js"></script>
             <script src="../../assets/js/respond.min.js"></script>
-        <![endif]--><meta name="author" content="Marco Bretzke">
-<link rel="next" href="../first-theme-change/" title="First Theme change" type="text/html">
+        <![endif]--><meta name="description" itemprop="description" content="How to customize a nikola theme using bootswatch ">
+<meta name="author" content="Marco Bretzke">
+<link rel="prev" href="../create-githubio-pages-with-org-mode-using-nikola/" title="Create github.io pages with org-mode using nikola" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -55,7 +57,7 @@
                 </ul>
 <ul></ul></nav><div class="posts-material col-xs-12 col-sm-9">
                 <div class="col-xs-12 col-md-11 content-material">
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">This is my first post using Nikola and org-mode</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Customizing a Nikola Theme</a></h1>
 <hr>
 <div class="metadata">
             <span class="byline author vcard">
@@ -66,32 +68,56 @@
             </span>
             <span class="dateline">
                 <a href="." rel="bookmark"><i class="mdi-device-access-time"></i>
-                    <time class="published dt-published" datetime="2018-11-28T15:33:32+01:00" itemprop="datePublished" title="2018-11-28 15:33">2018-11-28 15:33</time></a>
+                    <time class="published dt-published" datetime="2018-11-29T11:33:45+01:00" itemprop="datePublished" title="2018-11-29 11:33">2018-11-29 11:33</time></a>
             </span>
                 <span class="commentline">        
 </span>
-        </div>
+                <meta name="description" itemprop="description" content="How to customize a nikola theme using bootswatch ">
+</div>
         
         <hr></header><div class="e-content entry-content" itemprop="articleBody text">
     <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">This first post using github pages and org-mode</h2>
+<h2 id="sec-1">How to customize a nikola theme using bootswatch</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Install the theme you want to modify with a bootswatch CSS file</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="highlight"><pre><span></span>nikola theme -i bootstrap4   
+</pre></div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Create a subtheme and apply the bootswatch CSS</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-Looking for a way to blog easily using org-mode files and generate a blog hosted on github.io i stumbled upon
-Nikola, a static site generator that has an org-mode plugin. This is my fist test after messing with the installation.
+Check out bootswatch.com for a style you like and use the subtheme command to create
+a new theme based on the one you installed earlier
 </p>
+<div class="highlight"><pre><span></span>nikola subtheme --name=newtheme --parent=bootstrap4 -s lux   
+</pre></div>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">Switch to the new theme in your conf.py by changing the line</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="highlight"><pre><span></span>THEME = 'newtheme'   
+</pre></div>
+<p>
+Then rebuild the site and enjoy !
+</p>
+</div>
 </div>
 </div>
     </div>
     <aside class="postpromonav"><nav><div itemprop="keywords" class="tags">
-            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../../categories/emacs/" rel="tag">emacs</a>
             <a class="tag p-category btn btn-success btn-raised btn-sm" href="../../categories/nikola/" rel="tag">nikola</a>
-            <a class="tag p-category btn btn-success btn-raised btn-sm" href="../../categories/orgmode/" rel="tag">orgmode</a>
         </div>
 
             <ul class="pager">
-<li class="next">
-                <a href="../first-theme-change/" rel="next" title="First Theme change">Next post</a>
+<li class="previous">
+                <a href="../create-githubio-pages-with-org-mode-using-nikola/" rel="prev" title="Create github.io pages with org-mode using nikola">Previous post</a>
             </li>
         </ul></nav></aside><section class="comments"><h2>
 <i class="mdi-communication-forum"></i>Comments</h2>
