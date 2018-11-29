@@ -1,0 +1,23 @@
+#+BEGIN_COMMENT
+.. title: Home
+.. slug: index
+.. date: 2018-11-29 00:49:14 UTC+01:00
+.. tags: 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+.. hidetitle: True
+
+#+END_COMMENT
+
+
+* Welcome to my Homepage
+
+  I never thought i would create another after years of absence but using emacs and Nikola makes it quite comfortable again :-)
+  On this page i want to share the stuff and topics i stumble upon my journey through live. These can be anything but most likely
+  tech topics about linux, ricing my desktop, emacs/orgmode which i use to create this site and maybe my other personal projects.
+
+** Not much to see yet 
+   As i just created the site it will possibly take a while before worth sharing and will change in look and structure often.
+   Feel free to come back later :-)

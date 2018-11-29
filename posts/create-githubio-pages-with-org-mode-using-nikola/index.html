@@ -5,7 +5,16 @@
 <meta name="description" content="How to create github pages with org-mode">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Create github.io pages with org-mode using nikola | Marco's Blog</title>
-<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/roboto.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/material.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ripples.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/kc.fab.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://marcobre.github.io/posts/create-githubio-pages-with-org-mode-using-nikola/">
 <!--[if lt IE 9]>
@@ -38,7 +47,8 @@
 </nav><div class="container-fluid main" id="content" role="main">
         <div class="row">
             <nav class="col-xs-12 col-sm-3 menu"><ul>
-<li class="withripple"><a href="../../archive.html">Archiv</a></li>
+<li class="withripple"><a href="http://github.com/marcobre">GitHub</a></li>
+                <li class="withripple"><a href="../../archive.html">Archiv</a></li>
                 <li class="withripple"><a href="../../categories/">Tags</a></li>
                 <li class="withripple"><a href="../../rss.xml">RSS-Feed</a></li>
 
@@ -72,11 +82,11 @@
 <div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1">Install pip and virtualenv</h3>
 <div class="outline-text-3" id="text-1-1">
-<p>
-sudo apt-get install python3-virtualenv python3-pip
-</p>
+<div class="highlight"><pre><span></span>sudo apt-get install python3-virtualenv python3-pip
+</pre></div>
 </div>
 </div>
+
 <div id="outline-container-sec-1-2" class="outline-3">
 <h3 id="sec-1-2">prepare the virtualenv 'blog' in virtual environment folder ~/virenvs</h3>
 <div class="outline-text-3" id="text-1-2">
@@ -96,17 +106,22 @@ Add the following lines to your startup script like .bashrc
 export PROJECT_HOME=$HOME/your project folder
 source ~/.local/bin/virtualenvwrapper.sh
 </pre></div>
+<p>
+then reload the .bashrc file
+</p>
+<div class="highlight"><pre><span></span>source ~/.bashrc
+</pre></div>
 </div>
 </div>
+
 <div id="outline-container-sec-1-3" class="outline-3">
 <h3 id="sec-1-3">install Nikola + requirements in the "blog" virtualenv</h3>
 <div class="outline-text-3" id="text-1-3">
-<p>
-pip3 install –upgrade pip setuptools wheel Cython
-pip3 install –upgrade "Nikola[extras,tests]"
+<div class="highlight"><pre><span></span>pip3 install --upgrade pip setuptools wheel Cython
+pip3 install --upgrade "Nikola[extras,tests]"
 nikola plugin -i orgmode
 cd $HOME/path/to/your/project
-</p>
+</pre></div>
 </div>
 </div>
 
@@ -158,7 +173,7 @@ COMPILERS["orgmode"] = ('.org',)
 
 # Add org files to your POSTS, PAGES
 POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
-PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+PAGES = PAGES + (("pages/*.org", "pages", "page.tmpl"),)
 </pre></div>
 </div>
 </div>
@@ -212,7 +227,13 @@ There are many similar howtos for this topic. I quickly created this post while 
 <div class="outline-text-3" id="text-2-1">
 <p>
 <a href="https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/">https:streakycobra.github.io/posts/blogging-in-org-mode-with-nikola/</a>
+</p>
+
+<p>
 <a href="https:getnikola.com/getting-started.html">https:getnikola.com/getting-started.html</a>
+</p>
+
+<p>
 <a href="https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola">https:mindtoilet.github.io/posts/how-to-write-a-blog-using-nikola</a>
 <a href="https:virtualenvwrapper.readthedocs.io/en/latest/install.html">https:virtualenvwrapper.readthedocs.io/en/latest/install.html</a>
 </p>
@@ -259,7 +280,7 @@ There are many similar howtos for this topic. I quickly created this post while 
 </div>
 
 
-            <script src="../../assets/js/all-nocdn.js"></script><script>
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/baguetteBox.min.js"></script><script src="../../assets/js/kc.fab.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.min.js"></script><script src="../../assets/js/ripples.min.js"></script><script src="../../assets/js/material.min.js"></script><script>
 
             $(document).ready(function() {
                 // This command is used to initialize some elements and make them work properly
