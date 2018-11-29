@@ -1,0 +1,30 @@
+#+BEGIN_COMMENT
+.. title: Customizing a Nikola Theme
+.. slug: customizing-a-nikola-theme
+.. date: 2018-11-29 11:33:45 UTC+01:00
+.. tags: nikola 
+.. category: 
+.. link: 
+.. description: How to customize a nikola theme using bootswatch 
+.. type: text
+
+#+END_COMMENT
+
+* How to customize a nikola theme using bootswatch
+
+** Install the theme you want to modify with a bootswatch CSS file
+   #+BEGIN_SRC shell
+   nikola theme -i bootstrap4   
+   #+END_SRC
+
+** Create a subtheme and apply the bootswatch CSS
+   Check out bootswatch.com for a style you like and use the subtheme command to create
+   a new theme based on the one you installed earlier
+   #+BEGIN_SRC shell
+   nikola subtheme --name=newtheme --parent=bootstrap4 -s lux   
+   #+END_SRC
+** Switch to the new theme in your conf.py by changing the line 
+   #+BEGIN_SRC shell
+   THEME = 'newtheme'   
+   #+END_SRC
+   Then rebuild the site and enjoy !
